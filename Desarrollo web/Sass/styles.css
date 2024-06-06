@@ -1,0 +1,57 @@
+@charset "UTF-8";
+.caja h2 {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.caja p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: solid;
+}
+
+body {
+  background: #ccc;
+}
+
+h1 {
+  color: blue;
+}
+
+p, ul {
+  color: blue;
+}
+
+.caja {
+  background-color: white;
+  border: 4px solid black;
+  box-shadow: 0px 0px 2px black;
+  color: green;
+  margin: 20px;
+}
+
+.caja-secundaria {
+  background-color: yellow;
+  border: 4px solid black;
+  box-shadow: 0px 0px 2px black;
+  color: red;
+  margin: 20px;
+}
+
+.caja, .caja-secundaria {
+  width: 900px;
+  height: 400;
+}
+
+/*
+//Anidación
+.caja{
+    h2{
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    p{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-decoration: solid;
+    }
+}*/
+
+/*# sourceMappingURL=styles.css.map */

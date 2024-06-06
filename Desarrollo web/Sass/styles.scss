@@ -1,0 +1,55 @@
+//si tuvieramos otra hoja de sass se debe cargar el modulo
+@use 'anidacion';
+
+//Variables
+$color-principal: #ccc;
+$color-letra: blue;
+
+body{
+    background: $color-principal;
+}
+
+h1{
+    color: $color-letra;
+}
+
+p,ul{
+    color: $color-letra;
+}
+
+//mixins
+@mixin caja_personalidada($fondo:white, $color: $color-letra){
+    background-color: $fondo;
+    border: 4px solid black;
+    box-shadow: 0px 0px 2px black;
+    color: $color;
+    margin:20px;
+}
+
+.caja{
+    @include caja_personalidada($color: green);
+}
+
+.caja-secundaria{
+    @include caja_personalidada($fondo: yellow, $color: red );
+}
+
+
+//Operadores
+.caja, .caja-secundaria{
+    width: 900px;
+    height: 400;
+}
+
+/*
+//Anidación
+.caja{
+    h2{
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    p{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-decoration: solid;
+    }
+}*/

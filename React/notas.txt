@@ -1,0 +1,146 @@
+Para poder trabajar con react y el entorno de desarrollo descargar las extensiones
+ES7+ React/Redux/React-Native snippets
+HTML CSS Support
+HTML/CSS/JavaScript Snippets
+Prettier - Code formatter
+Sass (.sass only)
+
+comando para crear un proyecto
+npx create-react-app 01-primeros-pasos 
+
+We suggest that you begin by typing:
+
+  cd 01-primeros-pasos
+  npm start
+
+  //el navegador agregarle la extension "React Developer Tools"
+
+
+Componente: una parte de la aplicacion puede ser una clase, una funcion, etc. Separar en partes pequeñas logicas
+Cada fichero debe ser un componente
+para hacer una instruccion de java script es entre llaves {ciclo, condiciones}
+
+Java: Usa camelCase para variables y métodos, y PascalCase para clases.
+upper camelcase "EstoEsUnEjemplo"
+lower camelcase "estoEsUnEjemplo"
+
+
+hooks:
+- useState
+- use useEffect
+
+En React, las funciones de callback se utilizan en varios contextos para manejar eventos, pasar datos entre componentes, y realizar operaciones asincrónicas. A continuación, te presento algunos ejemplos comunes de cómo se utilizan las funciones de callback en React:
+
+1. Manejo de Eventos
+Las funciones de callback se utilizan comúnmente para manejar eventos, como clics de botones, cambios en campos de entrada, etc.
+///CODIGO
+import React, { useState } from 'react';
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  const handleClick = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <button onClick={handleClick}>Click me</button>
+      <p>Count: {count}</p>
+    </div>
+  );
+}
+
+export default App;
+
+//Termina CODIGO
+En este ejemplo, handleClick es una función de callback que se pasa al evento onClick del botón. Cuando se hace clic en el botón, handleClick se ejecuta y actualiza el estado count.
+
+2. Paso de Datos entre Componentes
+Las funciones de callback también se utilizan para pasar datos desde un componente hijo a un componente padre.
+
+javascript
+Copiar código
+import React, { useState } from 'react';
+
+function ChildComponent({ onButtonClick }) {
+  return <button onClick={() => onButtonClick("Hello from Child")}>Click me</button>;
+}
+
+function ParentComponent() {
+  const [message, setMessage] = useState('');
+
+  const handleButtonClick = (msg) => {
+    setMessage(msg);
+  };
+
+  return (
+    <div>
+      <ChildComponent onButtonClick={handleButtonClick} />
+      <p>Message: {message}</p>
+    </div>
+  );
+}
+
+export default ParentComponent;
+En este ejemplo, handleButtonClick es una función de callback definida en el componente padre ParentComponent y se pasa como una prop onButtonClick al componente hijo ChildComponent. Cuando se hace clic en el botón en el componente hijo, la función onButtonClick se llama y se pasa un mensaje al componente padre.
+
+3. Operaciones Asincrónicas
+Las funciones de callback se utilizan frecuentemente para manejar resultados de operaciones asincrónicas, como peticiones a una API.
+
+javascript
+Copiar código
+import React, { useState, useEffect } from 'react';
+
+function App() {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('https://api.example.com/data')
+      .then(response => response.json())
+      .then(data => {
+        setData(data);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div>
+      <h1>Data:</h1>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </div>
+  );
+}
+
+export default App;
+En este ejemplo, las funciones de callback se utilizan en la cadena de promesas de fetch para manejar los datos obtenidos de una API y actualizar el estado del componente.
+
+4. Callbacks en setState
+En casos donde necesitas actualizar el estado basándote en el estado anterior, puedes pasar una función de callback a setState (o setCount en el caso de hooks).
+
+javascript
+Copiar código
+import React, { useState } from 'react';
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  const handleClick = () => {
+    setCount(prevCount => prevCount + 1);
+  };
+
+  return (
+    <div>
+      <button onClick={handleClick}>Click me</button>
+      <p>Count: {count}</p>
+    </div>
+  );
+}
+
+export default App;
+En este ejemplo, setCount recibe una función de callback que toma el estado anterior (prevCount) y devuelve el nuevo estado (prevCount + 1).
