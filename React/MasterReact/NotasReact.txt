@@ -1,0 +1,61 @@
+
+Los componentes en React son las piezas fundamentales de cualquier aplicación React. Son esencialmente clases de JavaScript o funciones que pueden producir HTML para mostrar en 
+la interfaz de usuario mediante el método render en el caso de componentes basados en clases, o directamente como funciones en componentes funcionales.
+
+Componentes basados en clases
+Un componente basado en clase en React se define utilizando ES6 classes. Aquí hay un ejemplo sencillo:
+/////////////////////////codigo
+import React, { Component } from 'react';
+
+class MiComponente extends Component {
+    constructor(props) {
+        super(props);
+        // Estado inicial del componente
+        this.state = {
+            mensaje: "Hola Mundo"
+        };
+    }
+
+    render() {
+        return (
+            <div>
+                {this.state.mensaje}
+            </div>
+        );
+    }
+}
+
+export default MiComponente;
+/////////// codigo
+Explicación:
+  - Importar React y Component: Necesitas importar React y Component de la biblioteca react para poder usar JSX y definir un componente como una clase.
+  - Clase MiComponente: Esta es la definición de tu componente. Extiende Component, lo que significa que hereda funcionalidad de la clase Component de React.
+  - constructor: Es un método especial para crear e inicializar un objeto creado con una clase. En los componentes de React, usualmente se utiliza 
+    para establecer el estado ""inicial del componente o para enlazar métodos"".
+  - state: Es un objeto donde se almacenan propiedades que el componente puede manejar y que puede cambiar a lo largo del tiempo. Cada vez que el estado 
+    cambia, el componente se renderiza de nuevo. - render(): Es el método que debe devolver los elementos JSX que quieres mostrar en la interfaz. 
+    Este método se llama automáticamente cada vez que el estado del componente cambia.
+
+
+
+El único método que debes definir en una React.Componentsubclase se llama render(). Todos los demás métodos descritos en esta página son opcionales. codigo DOM
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+clase que utiliza 
+
+
+this.state se utiliza para acceder al estado actual del componente, mientras que this.setState se utiliza para actualizar el estado, lo que también desencadena una nueva renderización del componente. 
+
+constructor(props)
+Si no inicializa el estado y no vincula métodos, no necesita implementar un constructor para su componente React.
+
+this.state
+this.state es una propiedad de los componentes de clase en React que almacena el estado del componente. El estado es un objeto que contiene datos que pueden cambiar a lo largo del 
+tiempo y que afectan cómo se renderiza el componente. Cuando el estado de un componente cambia, React re-renderiza el componente para reflejar esos cambios.
+
+this.setState
+this.setState es un método que se utiliza para actualizar el estado de un componente. Es la única manera segura de actualizar el estado después de que el componente se 
+ha montado. Cuando llamas a this.setState, React planifica una actualización al objeto de estado del componente, y una vez que el estado se ha actualizado, React re-renderiza el componente.

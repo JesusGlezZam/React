@@ -1,0 +1,110 @@
+Manejo de Rutas
+    React Router
+        Función: Manejo de rutas en aplicaciones React.
+        Descripción: Permite la navegación entre diferentes componentes sin recargar la página, soporta rutas dinámicas, rutas anidadas y más.
+        Instalación: npm install react-router-dom
+
+Manejo del Estado
+    Redux
+        Función: Gestión del estado global de la aplicación.
+        Descripción: Proporciona un contenedor predecible para el estado de la aplicación, útil para aplicaciones grandes con muchos estados compartidos.
+        Instalación: npm install redux react-redux
+
+    Recoil
+        Función: Gestión del estado.
+        Descripción: Simplifica el manejo del estado compartido y derivado en React.
+        Instalación: npm install recoil
+
+    MobX
+        Función: Gestión del estado.
+        Descripción: Proporciona una forma sencilla y escalable para gestionar el estado de las aplicaciones React.
+        Instalación: npm install mobx mobx-react
+
+Solicitudes HTTP
+
+    Axios
+        Función: Realizar solicitudes HTTP.
+        Descripción: Cliente HTTP basado en promesas para el navegador y node.js.
+        Instalación: npm install axios
+
+    React Query
+        Función: Manejo de datos asíncronos.
+        Descripción: Ayuda a gestionar las solicitudes de datos y el estado del servidor, facilita el almacenamiento en caché, la sincronización, etc.
+        Instalación: npm install react-query
+
+Estilos
+
+    Styled-components
+        Función: Estilos en componentes.
+        Descripción: Permite escribir CSS en tus componentes usando JavaScript.
+        Instalación: npm install styled-components
+
+    Emotion
+        Función: Estilos en componentes.
+        Descripción: Librería de estilos CSS-in-JS, similar a styled-components.
+        Instalación: npm install @emotion/react @emotion/styled
+
+Componentes de UI
+    
+    Material-UI (MUI)
+        Función: Componentes de UI preconstruidos.
+        Descripción: Proporciona componentes de UI de alta calidad que siguen las pautas de Material Design.
+        Instalación: npm install @mui/material @emotion/react @emotion/styled
+    
+    Ant Design
+        Función: Componentes de UI preconstruidos.
+        Descripción: Biblioteca de componentes UI para React con un diseño limpio y moderno.
+        Instalación: npm install antd
+    
+    Bootstrap
+        Función: Componentes de UI preconstruidos.
+        Descripción: Popular biblioteca de CSS que también tiene componentes para React.
+        Instalación: npm install react-bootstrap bootstrap
+
+Manejo de Formularios
+
+    Formik
+        Función: Manejo de formularios.
+        Descripción: Simplifica el manejo de formularios en React, incluyendo la validación.
+        Instalación: npm install formik
+
+    React Hook Form
+        Función: Manejo de formularios.
+        Descripción: Permite crear formularios con rendimiento y validación simple en React.
+        Instalación: npm install react-hook-form
+
+Animaciones
+
+    Framer Motion
+        Función: Animaciones.
+        Descripción: Biblioteca de animación para React que permite crear animaciones complejas y fluidas.
+        Instalación: npm install framer-motion
+
+    React Spring
+        Función: Animaciones.
+        Descripción: Librería de animación basada en la física para React, permite crear animaciones fluidas y realistas.
+        Instalación: npm install react-spring
+
+Iconos
+
+    React Icons
+        Función: Uso de iconos.
+        Descripción: Permite usar iconos de varias bibliotecas populares como Font Awesome, Material Design, etc.
+        Instalación: npm install react-icons
+
+Utilidades Diversas
+
+    React Helmet
+        Función: Manejo de meta tags.
+        Descripción: Permite gestionar la meta información del documento HTML desde componentes de React.
+        Instalación: npm install react-helmet
+
+    React Toastify
+        Función: Notificaciones.
+        Descripción: Facilita la creación de notificaciones en tu aplicación React.
+        Instalación: npm install react-toastify
+
+    React Dropzone
+        Función: Manejo de archivos.
+        Descripción: Permite añadir funcionalidades de arrastrar y soltar archivos.
+        Instalación: npm install react-dropzone

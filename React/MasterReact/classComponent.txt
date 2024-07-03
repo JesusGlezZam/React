@@ -1,0 +1,172 @@
+Class component  rcc 
+es una clase de JavaScript que extiende de React.Component y tiene varias características y capacidades:
+
+    - Ciclo de Vida del Componente:
+
+    Los componentes de clase pueden implementar métodos del ciclo de vida, que permiten ejecutar código en momentos específicos del ciclo de vida del componente.
+    Ejemplos:
+        - componentDidMount(): Se llama después de que el componente se haya montado en el DOM. Es un buen lugar para realizar solicitudes de datos iniciales.
+        - componentDidUpdate(prevProps, prevState): Se llama después de que el componente se haya actualizado. Se puede utilizar para realizar operaciones que dependen de cambios en las props o el estado.
+        - componentWillUnmount(): Se llama justo antes de que el componente sea desmontado y destruido. Es útil para limpiar recursos como temporizadores o suscripciones.
+
+    - Manejo del Estado: Los componentes de clase tienen un estado local que puede ser manipulado con this.state y this.setState().
+    Ejemplo:
+
+                class MiComponente extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    contador: 0
+                };
+            }
+
+            incrementarContador = () => {
+                this.setState({ contador: this.state.contador + 1 });
+            }
+
+            render() {
+                return (
+                    <div>
+                        <p>Contador: {this.state.contador}</p>
+                        <button onClick={this.incrementarContador}>Incrementar</button>
+                    </div>
+                );
+            }
+        }
+        export default MiComponente;
+
+    Siempre debes llamar a super(props) al inicio del constructor cuando defines el constructor de un componente de clase que extiende React.Component. 
+    Esto asegura que this.props se inicialice correctamente.
+
+    - Incluir props en el constructor: Cuando necesitas usar props para inicializar el estado u otras configuraciones dentro del constructor. 
+        Asegúrate de llamar a super(props) para pasar props al constructor de la clase base.
+                                        import React, { Component } from 'react';
+
+                                        class Greeting extends Component {
+                                            constructor(props) {
+                                                super(props);
+                                                this.state = {
+                                                message: `Hello, ${props.name}!`
+                                                };
+                                            }
+
+                                            render() {
+                                                return <h1>{this.state.message}</h1>;
+                                            }
+                                        }
+
+                                        export default Greeting;                
+
+
+    - No incluir props en el constructor: Cuando no necesitas acceder a props en el constructor. Puedes acceder a props directamente en el método render u otros métodos de la clase.
+                                        import React, { Component } from 'react';
+
+                                        class SimpleMessage extends Component {
+                                                render() {
+                                                return <h1>{this.props.message}</h1>;
+                                            }
+                                        }
+
+                                        export default SimpleMessage;
+
+
+El constructor de un componente de clase en React es un método especial que se utiliza para inicializar el estado 
+y enlazar métodos en el contexto del componente. Aquí está lo que generalmente va en el constructor de un componente de clase:
+
+    1. Inicialización del Estado    
+        Puedes definir el estado inicial del componente en el constructor utilizando this.state. 
+        El estado es un objeto que contiene datos que pueden cambiar a lo largo del ciclo de vida del componente.
+
+    2. Enlace de Métodos
+        Si tienes métodos que necesitan acceder al contexto this del componente, debes enlazarlos en el constructor. 
+        Esto se hace usando this.methodName = this.methodName.bind(this);.
+
+Estructura General del Constructor
+La estructura general del constructor en un componente de clase es la siguiente:
+
+jsx
+Copiar código
+            import React, { Component } from 'react';
+
+            class MyComponent extends Component {
+            constructor(props) {
+                super(props); // Llamar al constructor de la clase base (React.Component)
+                
+                // Inicialización del estado
+                this.state = {
+                // Definir las propiedades iniciales del estado
+                count: 0,
+                text: 'Hello, world!'
+                };
+
+                // Manejador de eventos 
+                // Define un metodo y lo pasa como un manejador de eventos
+                this.incrementCount = this.incrementCount.bind(this);
+            }
+
+            // Definición de métodos
+            incrementCount() {
+                this.setState({ count: this.state.count + 1 });
+            }
+
+            render() {
+                return (
+                <div>
+                    <p>{this.state.text}</p>
+                    <p>Count: {this.state.count}</p>
+                    <button onClick={this.incrementCount}>Increment</button>
+                </div>
+                );
+            }
+            }
+
+            export default MyComponent;
+
+Componente con funcion flecha lo mas usado
+        import React, { Component } from 'react';
+
+        class MyComponent extends Component {
+        constructor(props) {
+            super(props);
+            this.state = { count: 0 };
+        }
+
+        // Definir el método como una función de flecha
+        incrementCount = () => {
+            this.setState({ count: this.state.count + 1 });
+        }
+
+        render() {
+            return (
+            <div>
+                <p>Count: {this.state.count}</p>
+                <button onClick={this.incrementCount}>Increment</button>
+            </div>
+            );
+        }
+        }
+
+        export default MyComponent;
+
+
+En React, pasar propiedades (props) de un componente a otro es una forma común de compartir datos y comunicar diferentes partes de la aplicación. 
+Las props son inmutables, lo que significa que un componente no puede cambiar sus propias props, pero puede pasarlas a componentes secundarios.
+
+Revisar el ejemplo de ParentComponents.js con un componente funcion o una class component
+
+Cuándo Usar Cada Uno
+
+Usa Componentes Funcionales:
+
+    - Cuando el componente no necesita mantener un estado.
+    - Cuando prefieres una sintaxis más limpia y concisa.
+    - Cuando quieres aprovechar los hooks de React.
+
+Usa Componentes de Clase:
+
+    - Cuando el componente necesita métodos de ciclo de vida complejos.
+    - Cuando trabajas en un proyecto existente que ya usa componentes de clase y quieres mantener la consistencia.
+
+
+
+

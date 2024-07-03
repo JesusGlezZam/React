@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/main.js" type="module" defer></script>
+    <title>Proyecto con Jesus Gonzalez WEB</title>
+</head>
+<body>
+
+    <div class="layout">
+        <!--Cabecera-->
+        <header class="header">
+            <div class="logo">
+                <div class="play"></div>
+            </div>
+            
+            <h1>MisPelis</h1>
+        </header>
+
+        <!--Barra de navegación-->
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Peliculas</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+            
+        <!--Contenido principal-->
+        <section id="content" class="content">
+
+            <!--aqui van las peliculas-->
+            <article class="peli-item">
+              <h3 class="title">Como si fuera la primera vez (2004)</h3>
+              <p class="description">Henry es un hombre con miedo al compromiso, hasta que conoce a Lucy y siente que podría ser la chica indicada. Sin embargo, Lucy sufre de memoria a corto plazo y es incapaz de recordar lo que sucedió después de un trágico accidente que tuvo hace años.</p>
+  
+              <button class="edit">Editar</button>
+              <button class="delete">Borrar</button>
+          </article>
+  
+          <article class="peli-item">
+              <h3 class="title">Garra (2022)</h3>
+              <p class="description">Stanley es un reclutador de baloncesto que pasa por un mal momento en su carrera. Durante un viaje a España, descubre a un chico con un talento excepcional y un pasado turbulento. A pesar de las dificultades, ambos lucharán por llegar a la NBA.</p>
+  
+              <button class="edit">Editar</button>
+              <button class="delete">Borrar</button>
+          </article>
+  
+          <article class="peli-item">
+              <h3 class="title">Click: perdiendo el control (2006)</h3>
+              <p class="description">Michael se siente sobrepasado con su trabajo como arquitecto y le es difícil brindarle atención a su familia. Sin embargo, todo cambia cuando un extraño hombre le obsequia un control remoto universal que le permite manipular el tiempo a su antojo. Así, podrá adelantar todas las tareas tediosas, enfermedades y otros inconvenientes para dedicarse a lo que realmente quiere.</p>
+  
+              <button class="edit">Editar</button>
+              <button class="delete">Borrar</button>
+          </article>
+  
+          <article class="peli-item">
+              <h3 class="title">Una esposa de mentira (2011)</h3>
+              <p class="description">Danny es un exitoso cirujano plástico que finge estar casado para evitar relaciones a largo plazo. Todo cambia cuando conoce a Palmer, una joven y bella chica con la que sí desearía comprometerse. Sin embargo, ella descubre su falsa argolla de matrimonio y termina la relación.</p>
+  
+              <button class="edit">Editar</button>
+              <button class="delete">Borrar</button>
+          </article>
+  
+        </section>
+
+        <!--Barra lateral-->
+        <aside class="lateral">
+            <div class="search">
+                <h3 class="title">Buscador</h3>
+                <form>
+                    <input type="text" id="search_field" />
+                    <button id="search">Buscar</button>
+                </form>
+            </div>
+
+            <div class="add">
+                <h3 class="title">Añadir pelicula</h3>
+                <form>
+                    <input type="text" id="title" placeholder="Titulo" />
+                    <textarea id="description" placeholder="Descripción"></textarea>
+                    <input type="submit" id="save" value="Guardar" />
+                </form>
+            </div>
+        </aside>
+
+        <!--Pie de página-->
+        <footer class="footer">
+            &copy; Máster en React - <a href="https://victorroblesweb.es">victorroblesweb.es</a>
+        </footer>
+
+    </div>
+
+    
+</body>
+</html>
