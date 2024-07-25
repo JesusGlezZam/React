@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react"
 /**Practipara para que no se vuelva a renderizar el mismo componente hasta que haya sufrido un cambio. Visualizar quitando el React.memo() */
 export const EmpleadosCallBack = React.memo (({numPagina, mensaje}) => {
    const [empleados, setEmpleados] = useState([])
-
     useEffect(()=>{
         console.log("Se ha renderizado empleados")
     },[empleados])
