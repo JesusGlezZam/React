@@ -1,0 +1,26 @@
+Crea la nueva rama y cámbiate a ella:
+git checkout -b feature/nueva-funcionalidad
+
+Agrega y confirma tus cambios:
+git add .
+git commit -m "Agrega nueva funcionalidad"
+
+Sube la nueva rama al remoto:
+git push -u origin feature/nueva-funcionalidad
+
+Repositorio desactualizado:
+Si tu rama local está desactualizada respecto al remoto, puedes actualizarla antes de intentar subir los cambios:
+git pull origin nombre-nueva-rama --rebase
+
+Ramas remotas
+git branch -r
+
+Este comando mostrará tanto las ramas locales como las remotas:
+git branch -a
+
+
+
+
+npx create-react-app 14-reducer
+
+npm start 

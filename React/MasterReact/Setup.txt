@@ -5,6 +5,10 @@ HTML/CSS/JavaScript Snippets
 Prettier - Code formatter
 Sass (.sass only)
 
+Para utilizar NavLink etc etc
+npm install react-router-dom
+npm install react-router-dom
+
 comando para crear un proyecto
 npx create-react-app 01-primeros-pasos 
 

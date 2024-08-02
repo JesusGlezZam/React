@@ -1,0 +1,52 @@
+* {
+  margin: opx;    
+}
+
+body{
+  background-color: #ccc;
+}
+
+.header nav{
+  height: 80px;
+  background-color: black;
+  color: white;
+  display:  flex;
+  align-items: center;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.header ul{
+  flex-basis: 75%;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.header nav a:hover{
+ color: aqua; 
+}
+
+/*content*/
+.content{
+  width: 70%;
+  min-height: 350px;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid gray;
+  margin: 25px auto;
+  padding: 25px;
+}
+
+.login input{
+  display: block;
+  margin: 10px;
+  padding: 10px;
+}
