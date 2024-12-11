@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.activado{
+  font-weight: bold;
+  font-size: 15px;
+  color: rgb(13, 73, 111);
+  text-decoration: none;
+}
+
+.form-input {
+  display: block;
+  margin-bottom: 10px;
+}
